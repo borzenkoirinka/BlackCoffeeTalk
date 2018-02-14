@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.Asf.json" />
+    <None Remove="appsettings.Development.json" />
+    <None Remove="appsettings.DevServer.json" />
+    <None Remove="appsettings.json" />
+    <None Remove="PackageRoot\Config\eventFlowConfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.Asf.json" />
+    <Content Include="appsettings.Development.json" />
+    <Content Include="appsettings.DevServer.json" />
+    <Content Include="appsettings.json" />
+    <Content Include="PackageRoot\Config\eventFlowConfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Diagnostics.EventFlow" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Diagnostics.EventFlow.ServiceFabric" Version="1.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Owin.Cors" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Owin.Host.HttpListener" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Owin.Hosting" Version="3.1.0" />
+    <PackageReference Include="Microsoft.ServiceFabric" Version="6.1.456" />
+    <PackageReference Include="Microsoft.ServiceFabric.Data" Version="3.0.456" />
+    <PackageReference Include="Microsoft.ServiceFabric.Diagnostics.Internal" Version="3.0.456" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services" Version="3.0.456" />
+    <PackageReference Include="NLog.Owin.Logging" Version="1.1.0" />
+    <PackageReference Include="Swashbuckle.Core" Version="5.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlackCoffeeTalk.Service\BlackCoffeeTalk.Service.csproj" />
+    <ProjectReference Include="..\BlackCoffeeTalk.Shared\BlackCoffeeTalk.Shared.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="appsettings*.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

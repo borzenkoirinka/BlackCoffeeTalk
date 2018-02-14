@@ -1,0 +1,25 @@
+﻿{
+  "inputs": [
+    {
+      "type": "EventSource",
+      "sources": [
+        { "providerName": "MyCompany-BlackCoffeeTalk.AsfService-BlackCoffeeTalk" }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "type": "drop",
+      "include": "Level == Verbose"
+    }
+  ],
+  "outputs": [
+    {
+      "type": "ElasticSearch",
+      "indexNamePrefix": "servicefabric",
+      "serviceUri": "http://52.170.33.169:9200/",
+      "eventDocumentTypeName": "diagData"
+    }
+  ],
+  "schemaVersion": "2018-02-14"
+}

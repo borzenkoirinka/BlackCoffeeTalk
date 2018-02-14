@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "BlackCoffeeTalk": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "BLACKCOFFEETALK_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
